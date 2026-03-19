@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мой Flask Проект</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Регистратор посещений</h1>
+        
+        <!-- Форма для ввода имени -->
+        <form method="POST">
+            <input type="text" name="name" placeholder="Введите ваше имя" required>
+            <button type="submit" class="btn">Зарегистрироваться</button>
+        </form>
+
+        <div class="info-card">
+            <h3>Кто заходил сегодня:</h3>
+            <ul class="visit-list">
+                {% for visit in visits %}
+                    <li>
+                        <strong>{{ visit.username }}</strong> 
+                        <span>({{ visit.visit_time.strftime('%H:%M:%S') }})</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
