@@ -41,4 +41,8 @@ python app.py
 **static/** — Статические файлы (стили CSS).
 **database.db** — Локальная база данных SQLite (создается автоматически).
 
+## GIF-demo
+
+https://github.com/user-attachments/assets/d60265e7-7939-4915-950c-6bd18a4fc253
+
 
