@@ -43,6 +43,7 @@ python app.py
 
 ## GIF-demo
 
-https://github.com/user-attachments/assets/d60265e7-7939-4915-950c-6bd18a4fc253
+![2_ README md - My-Project-Flask  Codespaces_ humble potato  - Visual Studio Code — Яндекс Браузер 2026-03-19 15-07-41](https://github.com/user-attachments/assets/bb578ea7-776d-4eb4-9f30-224db487ccc8)
+
 
 
