@@ -39,6 +39,18 @@ def index():
     all_visits = Visit.query.order_by(Visit.visit_time.desc()).all()
     return render_template("index.html", visits=all_visits)
 
+@app.route("/clear")
+def clear_history():
+    try:
+        # Удаляем все записи из таблицы Visit
+        db.session.query(Visit).delete()
+        db.session.commit()
+    except Exception as e:
+        db.session.rollback()
+        print(f"Ошибка при очистке: {e}")
+    
+    return redirect(url_for('index'))
+
 if __name__ == "__main__":
     app.run(debug=True)
 
